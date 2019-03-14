@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>拒绝访问</title>
+</head>
+<body>
+	<h1>您的访问被拒绝</h1>
+	<p>这是一个拒绝访问的页面</p>
+	<p>
+		Click <a th:href="@{/hello}">here</a> 去你好页面
+	</p>
+	<p>
+		Click <a th:href="@{/logout}">here</a> 退出
+	</p>
+</body>
+</html>

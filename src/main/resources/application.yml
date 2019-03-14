@@ -1,0 +1,16 @@
+spring:
+   datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql:///wyesc?serverTimezone=UTC
+      username: root
+      password: 123123
+   
+   
+mybatis: 
+   config-location: classpath:mybatis-config.xml
+      
+
+logging:
+  level: 
+    com.tao.dao: DEBUG
+      

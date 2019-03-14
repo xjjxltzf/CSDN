@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>Hello World!</title>
+</head>
+<body style="background:url(backgrounds.gif) no-repeat 4px 5px ; height:100%; width:100%;">
+	<p>普通。每个人都可以参观。</p>
+	<div sec:authorize="hasRole('ROLE_ADMIN')">
+		<p>这是管理员访问.</p>
+	</div>
+	<!-- 通过标签鉴权，对应不同角色显示不同信息 -->
+	<div sec:authorize="hasRole('ROLE_USER')">
+		<p>这是用户访问。</p>
+	</div>
+	<div sec:authorize="hasRole('ROLE_TAO')">
+		<p>这是TAO才能访问</p>
+	</div>
+	<p>
+		Click <a th:href="@{/logout}">here</a> 退出
+	</p>
+	<p>
+		Click <a th:href="@{/admin}">here</a> 去管理员页面
+	</p>
+</body>
+</html>

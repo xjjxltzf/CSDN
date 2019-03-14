@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+  <settings>  	
+  	<setting name="useGeneratedKeys" value="true"/>
+  	<!-- 完全映射 -->
+  	<setting name="autoMappingBehavior" value="FULL"/>
+  	<!-- 开启懒加载 -->
+  	<setting name="lazyLoadingEnabled" value="true"/>
+  	<!-- 按需加载 -->
+  	<setting name="aggressiveLazyLoading" value="false"/>
+  	<!-- 开启全局缓存 -->
+  	<setting name="cacheEnabled" value="true"/>
+  </settings>
+  <!-- 类型别名 -->
+  <typeAliases>
+  	<package name="com.tao.pojo"/>  
+  </typeAliases>
+</configuration>
